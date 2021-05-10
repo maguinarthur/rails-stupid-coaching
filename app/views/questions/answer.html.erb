@@ -1,0 +1,26 @@
+<h1 class="mb-4"><strong>Stupid coaching</strong></h1>
+
+<div class="box">
+  <div class="indent"></div>
+  <div class="aligned">
+    <%= @question %>
+    <p>- <em>You</em></p>
+  </div>
+</div>
+
+<div class="box response">
+  <div class="indent"></div>
+  <div class="aligned">
+    <% if @question == "I am going to work" %>
+      <p><%= "Great!" %></p>
+    <% elsif @question.include?("?") %>
+      <p><%= "Silly question, get dressed and go to work!" %></p>
+    <% else %>
+      <p><%= "I don't care, get dressed and go to work!" %></p>
+    <% end %>
+    <p>- <em>Your coach</em></p>
+  </div>
+</div>
+
+<%= link_to "Ask a new question", ask_path %>
+
